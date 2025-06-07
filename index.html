@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Financiamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="assets/logoTitle.png" alt="Título do simulador" class="logo-title">
+        <img src="assets/logo.png" alt="Logo do simulador" class="logo">
+    </header>
+
+    <main>
+        <div class="container">
+            <img src="assets/banner.png" alt="Banner promocional" class="banner">
+            <p class="banner-text">Venha financiar o seu carro</p> <!-- Frase adicionada abaixo do banner -->
+            
+            <form id="simulador">
+                <div class="form-container">
+                    <label for="valor">Valor do veículo (R$):</label>
+                    <input type="text" id="valor" placeholder="Digite o valor">
+
+                    <label for="banco">Selecione um banco:</label>
+                    <select id="banco">
+                        <option value="Caixa">Caixa</option>
+                        <option value="Santander">Santander</option>
+                        <option value="Bradesco">Bradesco</option>
+                        <option value="Itaú">Itaú</option>
+                        <option value="Nubank">Nubank</option>
+                        <option value="Inter">Inter</option>
+                    </select>
+
+                    <label for="prazo">Prazo (meses):</label>
+                    <select id="prazo">
+                        <option value="6">6 meses</option>
+                        <option value="12">12 meses</option>
+                        <option value="18">18 meses</option>
+                        <option value="24">24 meses</option>
+                        <option value="36">36 meses</option>
+                        <option value="48">48 meses</option>
+                        <option value="60">60 meses</option>
+                        <option value="72">72 meses</option>
+                    </select>
+                </div>
+
+                <div class="btn-container">
+                    <button type="button" onclick="calcularFinanciamento()">Simular financiamento</button>
+                    <button class="refazer-btn" onclick="reiniciarSimulacao()">Refazer simulação</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="hidden">
+                <h2>Resultado da Simulação</h2>
+                <p>Valor das parcelas: <span id="valor-parcela">R$ 0,00</span></p>
+                <p>Valor total a pagar: <span id="valor-final">R$ 0,00</span></p>
+            </div>
+
+            <img src="assets/car.png" alt="Imagem do carro" class="car">
+        </div>
+    </main>
+
+    <footer>
+        <p>Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
